@@ -10,25 +10,113 @@
   width: 50%;
   /*Using calc to fix padding issue
   just  remove  the sum of padding and margin
-  
   */
   height: calc(100% - 2.5rem - 2.5rem);
   margin: auto;
 }
 
 .input_value__main {
-  border: 1px solid red;
   box-sizing: border-box;
   /*Using calc to fix padding issue*/
   width: calc(100% - 2rem - 2rem);
+  height: 100%;
   padding: 1rem;
-  margin: 1rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+}
+.input_value__bill,
+.input_value__tip,
+.input_value__people {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.bill__title,
+.tip__title,
+.people__title {
+  font-size: 0.9rem;
+  color: var(--dark-cyan);
+}
+
+.people__title {
+  display: flex;
   justify-content: space-between;
 }
 
 .bill__input_main,
 .people__input_main {
-  border: 1px solid var(--dark-cyan);
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--very-light-grayish-cyan);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+.bill__input_dollar p,
+.people__input_dollar p {
+  font-size: 1.2rem;
+  color: var(--dark-grayish-cyan);
+}
+
+.bill__input_dollar input,
+.people__input_dollar input {
+  font-family: var(--ff-primary);
+  font-size: 1.5rem;
+  text-align: right;
+  color: var(--very-dark-cyan);
+  font-weight: 700;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.tip__select input {
+  font-family: var(--ff-primary);
+  background-color: var(--very-light-grayish-cyan);
+}
+
+.tip__select {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.9rem;
+}
+.tip__select--btn,
+.tip__select--input {
+  grid-column: span 1;
+}
+.tip__select--input {
+  max-width: 7rem;
+  font-size: 1.5rem;
+  text-align: right;
+  color: var(--very-dark-cyan);
+  font-weight: 700;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.tip__select--input::placeholder {
+  max-width: 7rem;
+  font-family: var(--ff-primary);
+  font-size: 1.5rem;
+  text-align: right;
+  color: var(--dark-grayish-cyan);
+  font-weight: 700;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.people__input_dollar ::placeholder {
+  color: var(--dark-grayish-cyan);
+}
+
+.tip__select--btn {
+  font-size: 1.5rem;
+  font-family: var(--ff-primary);
+  color: var(--very-light-grayish-cyan);
+  background-color: var(--very-dark-cyan);
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.35rem 0;
 }

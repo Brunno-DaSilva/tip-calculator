@@ -61,7 +61,12 @@ const UserInput = () => {
                   {tip.percentage}%
                 </button>
               ) : (
-                <input id={tip.id} type="text" />
+                <input
+                  className="tip__select--input"
+                  id={tip.id}
+                  type="text"
+                  placeholder="Custom"
+                />
               )
             )}
           </div>
@@ -76,7 +81,7 @@ const UserInput = () => {
               <p>$</p>
             </div>
             <div className="people__input_dollar">
-              <input type="text" />
+              <input type="text" placeholder="0" />
             </div>
           </div>
         </div>
