@@ -1,0 +1,43 @@
+.main_calculator__result {
+  width: calc(50% - 0.5rem - 0.5rem);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: calc(100% - 2.5rem - 2.5rem);
+  margin: auto;
+}
+
+.result__main {
+  box-sizing: border-box;
+  width: calc(100% - 0.5rem - 0.5rem - 0.5rem - 0.5rem);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  margin-left: 0;
+  background-color: var(--very-dark-cyan);
+  border-radius: 1rem;
+}
+
+.result__amount,
+.result__total,
+.result__button {
+  width: 90%;
+  border: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.amount__title,
+.total__title {
+  display: flex;
+  flex-direction: column;
+}
+
+.amount__figure,
+.total__figure {
+  font-size: 2.5rem;
+  color: var(--primary-cyan);
+}

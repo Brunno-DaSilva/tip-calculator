@@ -1,0 +1,35 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main_calculator__input_value {
+  width: 50%;
+  /*Using calc to fix padding issue
+  just  remove  the sum of padding and margin
+  
+  */
+  height: calc(100% - 2.5rem - 2.5rem);
+  margin: auto;
+}
+
+.input_value__main {
+  border: 1px solid red;
+  box-sizing: border-box;
+  /*Using calc to fix padding issue*/
+  width: calc(100% - 2rem - 2rem);
+
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bill__input_main,
+.people__input_main {
+  border: 1px solid var(--dark-cyan);
+}

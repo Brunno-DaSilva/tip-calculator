@@ -1,0 +1,33 @@
+:root {
+  --primary-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-cyan: hsl(186, 14%, 43%);
+  --dark-grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+  --ff-primary: "Space Mono", monospace;
+  --fs-primary: 1.5rem;
+}
+
+.app {
+  /* border: 10px solid var(--dark-cyan); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+.app__header {
+  width: clamp(90%, 2+5, 60rem);
+  margin-bottom: 5rem;
+}
+.header__title {
+  font-family: var(--ff-primary);
+  color: var(--dark-cyan);
+  display: flex;
+  flex-direction: column;
+  font-size: var(--fs-primary);
+  line-height: 1.5;
+  letter-spacing: 0.5rem;
+}
