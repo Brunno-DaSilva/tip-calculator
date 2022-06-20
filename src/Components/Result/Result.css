@@ -24,10 +24,10 @@
 .result__amount,
 .result__total,
 .result__button {
-  width: 90%;
-  border: 1px solid white;
+  width: 95%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .amount__title,
@@ -35,9 +35,43 @@
   display: flex;
   flex-direction: column;
 }
+.amount__title p,
+.total__title p {
+  font-size: 1.1rem;
+  color: var(--very-light-grayish-cyan);
+}
+.amount__title span,
+.total__title span {
+  font-size: 0.9rem;
+  color: var(--dark-cyan);
+}
 
-.amount__figure,
-.total__figure {
-  font-size: 2.5rem;
+.amount__figure h3,
+.total__figure h3 {
+  font-size: 3.5rem;
   color: var(--primary-cyan);
+  letter-spacing: -2px;
+}
+
+.result__button {
+  display: flex;
+  justify-content: center;
+}
+
+.result__button button {
+  width: calc(100%);
+  padding: 1rem;
+  background-color: var(--primary-cyan);
+  color: var(--very-dark-cyan);
+  border: none;
+  opacity: 0.3;
+  border-radius: 0.25rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: ease-in-out all 0.4s;
+}
+.result__button button:hover {
+  cursor: pointer;
+  opacity: 0.99;
+  color: var(--very-dark-cyan);
 }

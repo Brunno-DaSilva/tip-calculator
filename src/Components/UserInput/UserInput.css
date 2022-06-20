@@ -21,7 +21,6 @@
   box-sizing: border-box;
   /*Using calc to fix padding issue*/
   width: calc(100% - 2rem - 2rem);
-
   padding: 1rem;
   margin: 1rem;
   display: flex;
