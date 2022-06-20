@@ -44,6 +44,9 @@
   display: flex;
   justify-content: space-between;
 }
+.people__title span {
+  color: tomato;
+}
 
 .bill__input_main,
 .people__input_main {
