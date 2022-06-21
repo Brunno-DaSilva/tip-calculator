@@ -72,11 +72,13 @@
   border: none;
   outline: none;
   background-color: transparent;
+  padding-right: 0.5rem;
 }
 
 .tip__select input {
   font-family: var(--ff-primary);
   background-color: var(--very-light-grayish-cyan);
+  padding-right: 0.5rem;
 }
 
 .tip__select {

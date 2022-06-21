@@ -27,7 +27,8 @@ const tips = [
     percentage: null,
   },
 ];
-const UserInput = () => {
+
+const UserInput = ({ handleChange }) => {
   return (
     <div className="main_calculator__input_value">
       <div className="input_value__main">

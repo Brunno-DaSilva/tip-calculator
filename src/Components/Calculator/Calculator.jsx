@@ -8,7 +8,7 @@ const Calculator = () => {
   const [userInput, setUserInput] = useState("");
 
   const handleChange = (e) => {
-    setValue(e.target.value);
+    setUserInput(e.target.value);
   };
 
   return (
