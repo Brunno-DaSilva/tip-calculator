@@ -2,8 +2,8 @@ import React from "react";
 import "./Result.css";
 
 const Result = ({ totalAmount, tipAmount, reset }) => {
-  let defaultTotal = totalAmount || `0.0`;
-  let defaultTip = tipAmount || `0.0`;
+  let defaultTotal = isNaN(totalAmount) ? "0.00" : totalAmount;
+  let defaultTip = isNaN(tipAmount) ? "0.00" : tipAmount;
 
   return (
     <div className="main_calculator__result">
@@ -15,7 +15,7 @@ const Result = ({ totalAmount, tipAmount, reset }) => {
           </div>
 
           <div className="amount__figure">
-            <h3>{`${defaultTip}`} </h3>
+            <h3>{`${defaultTip}`}</h3>
           </div>
         </div>
 
