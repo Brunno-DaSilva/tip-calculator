@@ -124,4 +124,10 @@
   border: none;
   border-radius: 0.25rem;
   padding: 0.35rem 0;
+  transition: var(--transition-4s);
+}
+.tip__select--btn:hover {
+  cursor: pointer;
+  color: var(--very-dark-cyan);
+  background-color: hsla(172, 67%, 45%, 0.888);
 }
