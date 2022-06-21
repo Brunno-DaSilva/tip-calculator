@@ -37,8 +37,10 @@ const Calculator = () => {
 
   const calcTotalAmountPerPerson = () => {
     let bill = parseFloat(billInput);
-    let tip = Number(tipInput) / 100;
+    let tip =
+      ((Number(tipInput) / 100) * parseFloat(billInput)) / Number(peopleInput);
     let people = Number(peopleInput);
+    console.log(tip);
     let total = parseFloat(bill) / parseInt(people) + tip;
     setTotalAmount(parseFloat(total.toFixed(2)));
   };
@@ -51,9 +53,6 @@ const Calculator = () => {
     setTipInput("");
     setPeopleInput("");
   };
-
-  // calcTotalAmountPerPerson();
-  // calcTipAmountPerPerson();
 
   return (
     <div className="main_calculator">
