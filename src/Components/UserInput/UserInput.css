@@ -112,7 +112,8 @@
   background-color: transparent;
 }
 
-.people__input_dollar ::placeholder {
+.people__input_dollar ::placeholder,
+.bill__input_dollar input::placeholder {
   color: var(--dark-grayish-cyan);
 }
 

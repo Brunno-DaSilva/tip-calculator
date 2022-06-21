@@ -28,10 +28,22 @@ const tips = [
   },
 ];
 
-const UserInput = ({ handleChange }) => {
+const UserInput = ({
+  handleBillChange,
+  handleTipChange,
+  handlePeopleChange,
+  onSubmit,
+}) => {
+  const onKeyDown = (e) => {
+    if (e.key === "Enter") return onSubmit;
+  };
   return (
     <div className="main_calculator__input_value">
-      <div className="input_value__main">
+      <form
+        className="input_value__main"
+        onKeyDown={onKeyDown}
+        onSubmit={onSubmit}
+      >
         <div className="input_value__bill">
           <div className="bill__title">
             <p>Bill</p>
@@ -41,7 +53,12 @@ const UserInput = ({ handleChange }) => {
               <p>$</p>
             </div>
             <div className="bill__input_dollar">
-              <input type="text" />
+              <input
+                name="bill"
+                onChange={handleBillChange}
+                type="text"
+                placeholder="0.0"
+              />
             </div>
           </div>
         </div>
@@ -51,22 +68,23 @@ const UserInput = ({ handleChange }) => {
             <p>Select Tip %</p>
           </div>
           <div className="tip__select">
-            {tips.map((tip) =>
+            {tips.map((tip, e) =>
               tip.percentage !== null ? (
                 <button
-                  key={tip.id}
+                  key={tip.id.toString()}
                   id={tip.id}
                   className="tip__select--btn"
-                  type="button"
                 >
                   {tip.percentage}%
                 </button>
               ) : (
                 <input
+                  key={tip.id}
                   className="tip__select--input"
-                  id={tip.id}
                   type="text"
                   placeholder="Custom"
+                  onChange={handleTipChange}
+                  name="tip"
                 />
               )
             )}
@@ -82,11 +100,16 @@ const UserInput = ({ handleChange }) => {
               <p>$</p>
             </div>
             <div className="people__input_dollar">
-              <input type="text" placeholder="0" />
+              <input
+                onChange={handlePeopleChange}
+                name="people"
+                type="text"
+                placeholder="0"
+              />
             </div>
           </div>
         </div>
-      </div>
+      </form>
     </div>
   );
 };
