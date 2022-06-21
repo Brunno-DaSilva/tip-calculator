@@ -32,18 +32,11 @@ const UserInput = ({
   handleBillChange,
   handleTipChange,
   handlePeopleChange,
-  onSubmit,
+  reset,
 }) => {
-  const onKeyDown = (e) => {
-    if (e.key === "Enter") return onSubmit;
-  };
   return (
     <div className="main_calculator__input_value">
-      <form
-        className="input_value__main"
-        onKeyDown={onKeyDown}
-        onSubmit={onSubmit}
-      >
+      <div className="input_value__main">
         <div className="input_value__bill">
           <div className="bill__title">
             <p>Bill</p>
@@ -74,6 +67,8 @@ const UserInput = ({
                   key={tip.id.toString()}
                   id={tip.id}
                   className="tip__select--btn"
+                  type="button"
+                  name="tip"
                 >
                   {tip.percentage}%
                 </button>
@@ -109,7 +104,7 @@ const UserInput = ({
             </div>
           </div>
         </div>
-      </form>
+      </div>
     </div>
   );
 };

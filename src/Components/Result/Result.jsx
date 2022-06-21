@@ -1,7 +1,10 @@
 import React from "react";
 import "./Result.css";
 
-const Result = () => {
+const Result = ({ totalAmount, tipAmount, reset }) => {
+  let defaultTotal = totalAmount || `0.0`;
+  let defaultTip = tipAmount || `0.0`;
+
   return (
     <div className="main_calculator__result">
       <div className="result__main">
@@ -12,7 +15,7 @@ const Result = () => {
           </div>
 
           <div className="amount__figure">
-            <h3>$0.00</h3>
+            <h3>{`${defaultTip}`} </h3>
           </div>
         </div>
 
@@ -23,11 +26,18 @@ const Result = () => {
           </div>
 
           <div className="total__figure">
-            <h3>$0.00</h3>
+            <h3>{`${defaultTotal}`}</h3>
           </div>
         </div>
         <div className="result__button">
-          <button type="button">RESET</button>
+          <button
+            type="button"
+            onClick={() => {
+              reset();
+            }}
+          >
+            RESET
+          </button>
         </div>
       </div>
     </div>
