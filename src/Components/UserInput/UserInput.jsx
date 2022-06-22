@@ -33,6 +33,7 @@ const UserInput = ({
   handleTipChange,
   handlePeopleChange,
   handleButtonInput,
+  setTipInput,
 }) => {
   return (
     <div className="main_calculator__input_value">
@@ -61,7 +62,7 @@ const UserInput = ({
             <p>Select Tip %</p>
           </div>
           <div className="tip__select">
-            {tips.map((tip, e) =>
+            {tips.map((tip, event) =>
               tip.percentage !== null ? (
                 <div className="tip__select--container">
                   <input
@@ -70,7 +71,7 @@ const UserInput = ({
                     name="tip-percentage"
                     id={tip.id}
                     onClick={() => {
-                      handleButtonInput(tip.id);
+                      setTipInput(tip.id);
                     }}
                     value={tip.percentage}
                     className="tip__select--radio"

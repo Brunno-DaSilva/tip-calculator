@@ -15,14 +15,16 @@ const Calculator = () => {
     if (billInput > 0 && tipInput > 0 && peopleInput > 0) {
       calcTotalAmountPerPerson();
       calcTipAmountPerPerson();
+      calcBasedOnBtnInput();
     }
   }, [billInput, tipInput, peopleInput, tipAmount]);
 
   const handleBillChange = (e) => {
     setBillInput(e.target.value);
   };
-  const handleTipChange = (e) => {
-    setTipInput(e.target.id || e.target.value);
+  const handleTipChange = (e, id) => {
+    console.log(e.target);
+    setTipInput(e.target.value);
   };
   const handlePeopleChange = (e) => {
     setPeopleInput(e.target.value);
@@ -36,7 +38,6 @@ const Calculator = () => {
     total = (bill * tip) / people;
     setTipAmount(parseFloat(total.toFixed(2)));
   };
-
   const calcTotalAmountPerPerson = () => {
     let bill = parseFloat(billInput);
     let tip =
@@ -47,39 +48,44 @@ const Calculator = () => {
     setTotalAmount(parseFloat(total.toFixed(2)));
   };
 
-  const calcBasedOnBtnInput = (id) => {
-    console.log("ID - ", id);
+  /*BUTTON CLICK */
+  const calcBasedOnBtnInput = () => {
     let billTotalAmount = parseFloat(billInput);
-    let peopleTotalAmount = parseInt(peopleInput);
+    console.log("billTotalAmount -", billTotalAmount);
 
-    let tipTotalAmount = ((id / 100) * billTotalAmount) / peopleTotalAmount;
+    let tipTotalAmount = (tipInput / 100) * billTotalAmount;
     console.log("tipTotalAmount - ", tipTotalAmount);
+
+    let peopleTotalAmount = parseInt(peopleInput);
+    console.log("peopleTotalAmount -", peopleTotalAmount);
+
+    tipTotalAmount = tipTotalAmount / peopleTotalAmount;
 
     let total =
       parseFloat(billTotalAmount) / parseInt(peopleTotalAmount) +
       tipTotalAmount;
 
-    console.log("TOTAL - ", total);
+    // console.log("TOTAL - ", total);
 
     let billTipAmount = parseFloat(billInput);
-    let tipTipAmount = id / 100;
+    let tipTipAmount = tipInput / 100;
     let peopleTipAmount = parseInt(peopleInput);
     let totalTipAmount = null;
     totalTipAmount = (billTipAmount * tipTipAmount) / peopleTipAmount;
 
-    console.log("TipAmount  - ", totalTipAmount);
+    // console.log("TipAmount  - ", totalTipAmount);
 
-    setTotalAmount(parseFloat(totalTipAmount.toFixed(2)));
-    setTipAmount(parseFloat(total.toFixed(2)));
+    setTipAmount(parseFloat(totalTipAmount.toFixed(2)));
+    setTotalAmount(parseFloat(total.toFixed(2)));
   };
 
   const handleReset = () => {
     console.log("RESET BUTTON CLICKED");
-    setTotalAmount(0);
-    setTipAmount(0);
-    setBillInput("");
-    setTipInput("");
-    setPeopleInput("");
+    setTotalAmount(null);
+    setTipAmount(null);
+    setBillInput(null);
+    setTipInput(null);
+    setPeopleInput(null);
   };
 
   return (
@@ -89,6 +95,7 @@ const Calculator = () => {
         handleTipChange={handleTipChange}
         handlePeopleChange={handlePeopleChange}
         handleButtonInput={calcBasedOnBtnInput}
+        setTipInput={setTipInput}
       />
       <Result
         totalAmount={totalAmount}
