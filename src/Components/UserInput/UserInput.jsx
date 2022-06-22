@@ -32,7 +32,7 @@ const UserInput = ({
   handleBillChange,
   handleTipChange,
   handlePeopleChange,
-  reset,
+  handleButtonInput,
 }) => {
   return (
     <div className="main_calculator__input_value">
@@ -63,18 +63,31 @@ const UserInput = ({
           <div className="tip__select">
             {tips.map((tip, e) =>
               tip.percentage !== null ? (
-                <button
-                  key={tip.id.toString()}
-                  id={tip.id}
-                  className="tip__select--btn"
-                  type="button"
-                  name="tip"
-                >
-                  {tip.percentage}%
-                </button>
+                <div className="tip__select--container">
+                  <input
+                    key={tip.id.toString()}
+                    type="radio"
+                    name="tip-percentage"
+                    id={tip.id}
+                    onClick={() => {
+                      handleButtonInput(tip.id);
+                    }}
+                    value={tip.percentage}
+                    className="tip__select--radio"
+                  />
+                  <label
+                    key={1 + tip.id.toString()}
+                    id={tip.id}
+                    className="tip__select--label"
+                    name="tip"
+                    htmlFor={tip.id}
+                  >
+                    {tip.percentage}%
+                  </label>
+                </div>
               ) : (
                 <input
-                  key={tip.id}
+                  key={1 + tip.id}
                   className="tip__select--input"
                   type="text"
                   placeholder="Custom"

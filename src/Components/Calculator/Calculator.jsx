@@ -5,15 +5,17 @@ import Result from "../Result/Result";
 import "./Calculator.css";
 
 const Calculator = () => {
-  const [totalAmount, setTotalAmount] = useState(0);
-  const [tipAmount, setTipAmount] = useState(0);
-  const [billInput, setBillInput] = useState("");
-  const [tipInput, setTipInput] = useState("");
-  const [peopleInput, setPeopleInput] = useState("");
+  const [totalAmount, setTotalAmount] = useState(null);
+  const [tipAmount, setTipAmount] = useState(null);
+  const [billInput, setBillInput] = useState(null);
+  const [tipInput, setTipInput] = useState(null);
+  const [peopleInput, setPeopleInput] = useState(null);
 
   useEffect(() => {
-    calcTotalAmountPerPerson();
-    calcTipAmountPerPerson();
+    if (billInput > 0 && tipInput > 0 && peopleInput > 0) {
+      calcTotalAmountPerPerson();
+      calcTipAmountPerPerson();
+    }
   }, [billInput, tipInput, peopleInput, tipAmount]);
 
   const handleBillChange = (e) => {
@@ -40,9 +42,35 @@ const Calculator = () => {
     let tip =
       ((Number(tipInput) / 100) * parseFloat(billInput)) / Number(peopleInput);
     let people = Number(peopleInput);
-    console.log(tip);
+
     let total = parseFloat(bill) / parseInt(people) + tip;
     setTotalAmount(parseFloat(total.toFixed(2)));
+  };
+
+  const calcBasedOnBtnInput = (id) => {
+    console.log("ID - ", id);
+    let billTotalAmount = parseFloat(billInput);
+    let peopleTotalAmount = parseInt(peopleInput);
+
+    let tipTotalAmount = ((id / 100) * billTotalAmount) / peopleTotalAmount;
+    console.log("tipTotalAmount - ", tipTotalAmount);
+
+    let total =
+      parseFloat(billTotalAmount) / parseInt(peopleTotalAmount) +
+      tipTotalAmount;
+
+    console.log("TOTAL - ", total);
+
+    let billTipAmount = parseFloat(billInput);
+    let tipTipAmount = id / 100;
+    let peopleTipAmount = parseInt(peopleInput);
+    let totalTipAmount = null;
+    totalTipAmount = (billTipAmount * tipTipAmount) / peopleTipAmount;
+
+    console.log("TipAmount  - ", totalTipAmount);
+
+    setTotalAmount(parseFloat(totalTipAmount.toFixed(2)));
+    setTipAmount(parseFloat(total.toFixed(2)));
   };
 
   const handleReset = () => {
@@ -60,6 +88,7 @@ const Calculator = () => {
         handleBillChange={handleBillChange}
         handleTipChange={handleTipChange}
         handlePeopleChange={handlePeopleChange}
+        handleButtonInput={calcBasedOnBtnInput}
       />
       <Result
         totalAmount={totalAmount}

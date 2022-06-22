@@ -15,7 +15,7 @@ const Result = ({ totalAmount, tipAmount, reset }) => {
           </div>
 
           <div className="amount__figure">
-            <h3>{`${defaultTip}`}</h3>
+            <h3>{defaultTip === null ? 0.0 : defaultTip}</h3>
           </div>
         </div>
 
@@ -26,7 +26,7 @@ const Result = ({ totalAmount, tipAmount, reset }) => {
           </div>
 
           <div className="total__figure">
-            <h3>{`${defaultTotal}`}</h3>
+            <h3>{defaultTotal === null ? 0.0 : defaultTotal}</h3>
           </div>
         </div>
         <div className="result__button">
