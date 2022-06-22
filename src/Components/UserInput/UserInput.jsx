@@ -38,12 +38,6 @@ const UserInput = ({
   setTipInput,
   peopleInput,
 }) => {
-  const [isPeopleZero, setIsPeopleZero] = useState(false);
-
-  const handleStateChange = () => {
-    setIsPeopleZero((prevMode) => !prevMode);
-  };
-
   return (
     <div className="main_calculator__input_value">
       <div className="input_value__main">
