@@ -57,10 +57,11 @@
   padding: 0.5rem;
 }
 
-.bill__input_dollar p,
-.people__input_dollar p {
-  font-size: 1.2rem;
-  color: var(--dark-grayish-cyan);
+.people__input_dollar,
+.bill__input_dollar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .bill__input_dollar input,

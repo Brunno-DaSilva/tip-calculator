@@ -96,6 +96,7 @@ const Calculator = () => {
         handlePeopleChange={handlePeopleChange}
         handleButtonInput={calcBasedOnBtnInput}
         setTipInput={setTipInput}
+        peopleInput={peopleInput}
       />
       <Result
         totalAmount={totalAmount}

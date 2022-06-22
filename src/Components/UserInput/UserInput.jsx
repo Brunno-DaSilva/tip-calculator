@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./UserInput.css";
+import PeopleIcon from "../../assets/images/icon-person.svg";
+import DollarIcon from "../../assets/images/icon-dollar.svg";
 
 const tips = [
   {
@@ -34,7 +36,14 @@ const UserInput = ({
   handlePeopleChange,
   handleButtonInput,
   setTipInput,
+  peopleInput,
 }) => {
+  const [isPeopleZero, setIsPeopleZero] = useState(false);
+
+  const handleStateChange = () => {
+    setIsPeopleZero((prevMode) => !prevMode);
+  };
+
   return (
     <div className="main_calculator__input_value">
       <div className="input_value__main">
@@ -44,7 +53,7 @@ const UserInput = ({
           </div>
           <div className="bill__input_main">
             <div className="bill__input_dollar">
-              <p>$</p>
+              <img src={DollarIcon} alt="Dollar Icon" />
             </div>
             <div className="bill__input_dollar">
               <input
@@ -100,13 +109,17 @@ const UserInput = ({
           </div>
         </div>
         <div className="input_value__people">
-          <div className="people__title">
-            <p>Number of People</p>
-            <span>Can't be zero</span>
-          </div>
+          {peopleInput === null ? (
+            <div className="people__title">
+              <p>Number of People</p>
+              <span>Can't be zero</span>
+            </div>
+          ) : (
+            <div></div>
+          )}
           <div className="people__input_main">
             <div className="people__input_dollar">
-              <p>$</p>
+              <img src={PeopleIcon} alt="People icon" />
             </div>
             <div className="people__input_dollar">
               <input
