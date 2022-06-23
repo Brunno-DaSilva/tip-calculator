@@ -38,10 +38,15 @@ const UserInput = ({
   peopleInput,
   billInput,
   tipInput,
+  isBrownMode,
 }) => {
   return (
     <div className="main_calculator__input_value">
-      <div className="input_value__main">
+      <div
+        className={
+          isBrownMode ? "input_value__main brown-mode" : "input_value__main"
+        }
+      >
         <div className="input_value__bill">
           <div className="bill__title">
             <p>Bill</p>
@@ -62,7 +67,11 @@ const UserInput = ({
           </div>
         </div>
 
-        <div className="input_value__tip">
+        <div
+          className={
+            isBrownMode ? "input_value__tip brown-mode" : "input_value__tip"
+          }
+        >
           <div className="tip__title">
             <p>Select Tip %</p>
           </div>
@@ -114,7 +123,13 @@ const UserInput = ({
           ) : (
             <div></div>
           )}
-          <div className="people__input_main">
+          <div
+            className={
+              isBrownMode
+                ? "people__input_main brown-mode"
+                : "people__input_main"
+            }
+          >
             <div className="people__input_dollar">
               <img src={PeopleIcon} alt="People icon" />
             </div>

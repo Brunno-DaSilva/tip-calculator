@@ -4,7 +4,7 @@ import Result from "../Result/Result";
 
 import "./Calculator.css";
 
-const Calculator = () => {
+const Calculator = ({ isBrownMode }) => {
   const [totalAmount, setTotalAmount] = useState(null);
   const [tipAmount, setTipAmount] = useState(null);
   const [billInput, setBillInput] = useState("");
@@ -90,11 +90,13 @@ const Calculator = () => {
         tipInput={tipInput}
         setPeopleInput={setPeopleInput}
         setBillInput={setBillInput}
+        isBrownMode={isBrownMode}
       />
       <Result
         totalAmount={totalAmount}
         tipAmount={tipAmount}
         reset={handleReset}
+        isBrownMode={isBrownMode}
       />
     </div>
   );

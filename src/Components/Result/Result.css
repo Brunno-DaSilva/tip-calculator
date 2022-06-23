@@ -17,7 +17,7 @@
   align-items: center;
   padding: 2rem;
   margin-left: 0;
-  background-color: var(--very-dark-cyan);
+  background-color: var(--result-background);
   border-radius: 1rem;
 }
 
@@ -38,18 +38,18 @@
 .amount__title p,
 .total__title p {
   font-size: 1.1rem;
-  color: var(--very-light-grayish-cyan);
+  color: var(--result-p);
 }
 .amount__title span,
 .total__title span {
   font-size: 0.9rem;
-  color: var(--dark-cyan);
+  color: var(--result-span);
 }
 
 .amount__figure h3,
 .total__figure h3 {
   font-size: 3.5rem;
-  color: var(--primary-cyan);
+  color: var(--result-h3);
   letter-spacing: -2px;
 }
 
@@ -61,8 +61,8 @@
 .result__button button {
   width: calc(100%);
   padding: 1rem;
-  background-color: var(--primary-cyan);
-  color: var(--very-dark-cyan);
+  background-color: var(--result-btn);
+  color: var(--result-background);
   border: none;
   opacity: 0.3;
   border-radius: 0.25rem;

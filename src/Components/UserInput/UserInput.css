@@ -51,7 +51,7 @@
 .people__input_main {
   display: flex;
   justify-content: space-between;
-  background-color: var(--very-light-grayish-cyan);
+  background-color: var(--input-bg);
   border-radius: 0.25rem;
   padding: 0.5rem;
   transition: var(--transition-4s);
@@ -105,7 +105,7 @@
 
 .tip__select input {
   font-family: var(--ff-primary);
-  background-color: var(--very-light-grayish-cyan);
+  background-color: var(--input-bg);
   padding-right: 0.5rem;
 }
 
@@ -126,7 +126,7 @@
   max-width: 7rem;
   font-size: 1.5rem;
   text-align: right;
-  color: var(--very-dark-cyan);
+  color: var(--input-btn);
   font-weight: 700;
   border: none;
   outline: none;
@@ -140,7 +140,7 @@
   font-family: var(--ff-primary);
   font-size: 1.5rem;
   text-align: right;
-  color: var(--dark-grayish-cyan);
+  color: var(--input-custom);
   font-weight: 700;
   border: none;
   outline: none;
@@ -149,7 +149,7 @@
 
 .people__input_dollar ::placeholder,
 .bill__input_dollar input::placeholder {
-  color: var(--dark-grayish-cyan);
+  color: var(--input-custom);
 }
 
 .tip__select--label {
@@ -158,8 +158,8 @@
   justify-content: center;
   font-size: 1.5rem;
   font-family: var(--ff-primary);
-  color: var(--very-light-grayish-cyan);
-  background-color: var(--very-dark-cyan);
+  color: var(--white);
+  background-color: var(--input-btn);
   border: none;
   border-radius: 0.25rem;
   padding: 0.35rem 0;
@@ -168,6 +168,6 @@
 }
 .tip__select--label:hover {
   cursor: pointer;
-  color: var(--very-dark-cyan);
-  background-color: hsla(172, 67%, 45%, 0.888);
+  color: var(--input-btn);
+  background-color: var(--input-btn-hover);
 }

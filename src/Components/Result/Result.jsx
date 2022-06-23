@@ -1,20 +1,28 @@
 import React from "react";
 import "./Result.css";
 
-const Result = ({ totalAmount, tipAmount, reset }) => {
+const Result = ({ totalAmount, tipAmount, reset, isBrownMode }) => {
   let defaultTotal = isNaN(totalAmount) ? "0.00" : totalAmount;
   let defaultTip = isNaN(tipAmount) ? "0.00" : tipAmount;
 
   return (
     <div className="main_calculator__result">
-      <div className="result__main">
-        <div className="result__amount">
+      <div className={isBrownMode ? "result__main brown-mode" : "result__main"}>
+        <div
+          className={
+            isBrownMode ? "result__amount brown-mode" : "result__amount"
+          }
+        >
           <div className="amount__title">
             <p>Tip Amount</p>
             <span>/ person</span>
           </div>
 
-          <div className="amount__figure">
+          <div
+            className={
+              isBrownMode ? "amount__figure brown-mode" : "amount__figure"
+            }
+          >
             <h3>
               $
               {defaultTip === null
@@ -26,7 +34,9 @@ const Result = ({ totalAmount, tipAmount, reset }) => {
           </div>
         </div>
 
-        <div className="result__total">
+        <div
+          className={isBrownMode ? "result__total brown-mode" : "result__total"}
+        >
           <div className="total__title">
             <p>Total</p>
             <span>/ person</span>
