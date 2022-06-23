@@ -54,8 +54,8 @@ const UserInput = ({
               <input
                 name="bill"
                 onChange={handleBillChange}
-                type="text"
-                placeholder="0.0"
+                type="number"
+                placeholder="0.00"
                 value={billInput}
               />
             </div>
@@ -95,7 +95,7 @@ const UserInput = ({
                 <input
                   key={1 + tip.id}
                   className="tip__select--input"
-                  type="text"
+                  type="number"
                   placeholder="Custom"
                   onChange={handleTipChange}
                   name="tip"
@@ -106,7 +106,7 @@ const UserInput = ({
           </div>
         </div>
         <div className="input_value__people">
-          {peopleInput === null ? (
+          {peopleInput === 0 ? (
             <div className="people__title">
               <p>Number of People</p>
               <span>Can't be zero</span>
@@ -122,7 +122,7 @@ const UserInput = ({
               <input
                 onChange={handlePeopleChange}
                 name="people"
-                type="text"
+                type="number"
                 placeholder="0"
                 value={peopleInput}
               />

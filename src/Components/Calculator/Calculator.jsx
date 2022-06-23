@@ -47,16 +47,10 @@ const Calculator = () => {
     setTotalAmount(parseFloat(total.toFixed(2)));
   };
 
-  /*BUTTON CLICK */
   const calcBasedOnBtnInput = () => {
     let billTotalAmount = parseFloat(billInput);
-    console.log("billTotalAmount -", billTotalAmount);
-
     let tipTotalAmount = (tipInput / 100) * billTotalAmount;
-    console.log("tipTotalAmount - ", tipTotalAmount);
-
     let peopleTotalAmount = parseInt(peopleInput);
-    console.log("peopleTotalAmount -", peopleTotalAmount);
 
     tipTotalAmount = tipTotalAmount / peopleTotalAmount;
 
@@ -64,15 +58,11 @@ const Calculator = () => {
       parseFloat(billTotalAmount) / parseInt(peopleTotalAmount) +
       tipTotalAmount;
 
-    // console.log("TOTAL - ", total);
-
     let billTipAmount = parseFloat(billInput);
     let tipTipAmount = tipInput / 100;
     let peopleTipAmount = parseInt(peopleInput);
     let totalTipAmount = null;
     totalTipAmount = (billTipAmount * tipTipAmount) / peopleTipAmount;
-
-    // console.log("TipAmount  - ", totalTipAmount);
 
     setTipAmount(parseFloat(totalTipAmount.toFixed(2)));
     setTotalAmount(parseFloat(total.toFixed(2)));
@@ -84,10 +74,6 @@ const Calculator = () => {
     setBillInput("");
     setTipInput("");
     setPeopleInput("");
-
-    console.log("PEOPLE INPUT -", peopleInput);
-    console.log("Bill  INPUT -", billInput);
-    console.log("TIP INPUT -", tipInput);
   };
 
   return (
