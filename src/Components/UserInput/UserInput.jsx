@@ -34,9 +34,10 @@ const UserInput = ({
   handleBillChange,
   handleTipChange,
   handlePeopleChange,
-  handleButtonInput,
   setTipInput,
   peopleInput,
+  billInput,
+  tipInput,
 }) => {
   return (
     <div className="main_calculator__input_value">
@@ -55,6 +56,7 @@ const UserInput = ({
                 onChange={handleBillChange}
                 type="text"
                 placeholder="0.0"
+                value={billInput}
               />
             </div>
           </div>
@@ -97,6 +99,7 @@ const UserInput = ({
                   placeholder="Custom"
                   onChange={handleTipChange}
                   name="tip"
+                  value={tipInput}
                 />
               )
             )}
@@ -121,6 +124,7 @@ const UserInput = ({
                 name="people"
                 type="text"
                 placeholder="0"
+                value={peopleInput}
               />
             </div>
           </div>

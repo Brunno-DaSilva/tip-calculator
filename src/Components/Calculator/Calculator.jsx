@@ -7,9 +7,9 @@ import "./Calculator.css";
 const Calculator = () => {
   const [totalAmount, setTotalAmount] = useState(null);
   const [tipAmount, setTipAmount] = useState(null);
-  const [billInput, setBillInput] = useState(null);
-  const [tipInput, setTipInput] = useState(null);
-  const [peopleInput, setPeopleInput] = useState(null);
+  const [billInput, setBillInput] = useState("");
+  const [tipInput, setTipInput] = useState("");
+  const [peopleInput, setPeopleInput] = useState("");
 
   useEffect(() => {
     if (billInput > 0 && tipInput > 0 && peopleInput > 0) {
@@ -20,14 +20,13 @@ const Calculator = () => {
   }, [billInput, tipInput, peopleInput, tipAmount]);
 
   const handleBillChange = (e) => {
-    setBillInput(e.target.value);
+    setBillInput(parseFloat(e.target.value));
   };
   const handleTipChange = (e, id) => {
-    console.log(e.target);
-    setTipInput(e.target.value);
+    setTipInput(parseInt(e.target.value));
   };
   const handlePeopleChange = (e) => {
-    setPeopleInput(e.target.value);
+    setPeopleInput(parseInt(e.target.value));
   };
 
   const calcTipAmountPerPerson = () => {
@@ -80,12 +79,15 @@ const Calculator = () => {
   };
 
   const handleReset = () => {
-    console.log("RESET BUTTON CLICKED");
-    setTotalAmount(null);
-    setTipAmount(null);
-    setBillInput(null);
-    setTipInput(null);
-    setPeopleInput(null);
+    setTotalAmount(0);
+    setTipAmount(0);
+    setBillInput("");
+    setTipInput("");
+    setPeopleInput("");
+
+    console.log("PEOPLE INPUT -", peopleInput);
+    console.log("Bill  INPUT -", billInput);
+    console.log("TIP INPUT -", tipInput);
   };
 
   return (
@@ -97,6 +99,10 @@ const Calculator = () => {
         handleButtonInput={calcBasedOnBtnInput}
         setTipInput={setTipInput}
         peopleInput={peopleInput}
+        billInput={billInput}
+        tipInput={tipInput}
+        setPeopleInput={setPeopleInput}
+        setBillInput={setBillInput}
       />
       <Result
         totalAmount={totalAmount}
