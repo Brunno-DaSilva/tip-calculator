@@ -54,6 +54,14 @@
   background-color: var(--very-light-grayish-cyan);
   border-radius: 0.25rem;
   padding: 0.5rem;
+  transition: var(--transition-4s);
+  border: 1px solid transparent;
+}
+
+.bill__input_main:hover,
+.people__input_main:hover,
+.tip__select--input:hover {
+  border: 1px solid var(--primary-cyan);
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -123,6 +131,9 @@
   border: none;
   outline: none;
   background-color: transparent;
+  transition: var(--transition-4s);
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
 }
 .tip__select--input::placeholder {
   max-width: 7rem;
