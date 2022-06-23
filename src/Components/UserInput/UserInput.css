@@ -57,6 +57,24 @@
   padding: 0.5rem;
 }
 
+/* Chrome, Safari, Edge, Opera */
+.bill__input_main input::-webkit-outer-spin-button,
+.bill__input_main input::-webkit-inner-spin-button,
+.people__input_main input::-webkit-outer-spin-button,
+.people__input_main input::-webkit-inner-spin-button,
+.tip__select input::-webkit-outer-spin-button,
+.tip__select input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.bill__input_main input[type="number"],
+.people__input_main input[type="number"],
+.tip__select input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .people__input_dollar,
 .bill__input_dollar {
   display: flex;

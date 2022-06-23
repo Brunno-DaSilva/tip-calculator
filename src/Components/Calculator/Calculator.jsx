@@ -35,8 +35,10 @@ const Calculator = () => {
     let people = parseInt(peopleInput);
     let total = null;
     total = (bill * tip) / people;
-    setTipAmount(parseFloat(total.toFixed(2)));
+
+    setTipAmount(parseFloat(total.toFixed(2).replace(/[.,]00$/, "")));
   };
+
   const calcTotalAmountPerPerson = () => {
     let bill = parseFloat(billInput);
     let tip =
