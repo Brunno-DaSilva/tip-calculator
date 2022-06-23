@@ -1,9 +1,26 @@
 .main_calculator {
-  width: clamp(80%, 60rem, 100%);
+  width: clamp(80%, 60rem, 55%);
   height: 42vh;
   display: flex;
   background-color: var(--white);
   border-radius: 1rem;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   margin: auto;
+}
+
+@media (max-width: 859px) {
+  .main_calculator {
+    height: 60vh;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .main_calculator__input_value,
+  .main_calculator__result {
+    height: 50vh;
+    width: 100%;
+  }
+  .main_calculator__result {
+    justify-content: center;
+  }
 }
