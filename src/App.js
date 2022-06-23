@@ -17,8 +17,8 @@ function App() {
         <button
           class={
             isBrownMode
-              ? "app__change_mode--btn brown-mode"
-              : "app__change_mode--btn"
+              ? "app__change_mode--btn "
+              : "app__change_mode--btn brown-mode"
           }
           onClick={handleThemeChange}
         >
