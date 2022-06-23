@@ -17,7 +17,6 @@
 
 .input_value__main {
   box-sizing: border-box;
-  /*Using calc to fix padding issue*/
   width: calc(100% - 2rem - 2rem);
   height: 100%;
   padding: 1rem;
@@ -55,7 +54,6 @@
   background-color: var(--very-light-grayish-cyan);
   border-radius: 0.25rem;
   padding: 0.5rem;
-  border: 1px solid red;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -94,7 +92,6 @@
   outline: none;
   background-color: transparent;
   padding-right: 0.5rem;
-  border: 1px solid red;
   width: 100%;
 }
 
