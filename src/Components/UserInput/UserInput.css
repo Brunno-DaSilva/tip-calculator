@@ -55,6 +55,7 @@
   background-color: var(--very-light-grayish-cyan);
   border-radius: 0.25rem;
   padding: 0.5rem;
+  border: 1px solid red;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -93,6 +94,8 @@
   outline: none;
   background-color: transparent;
   padding-right: 0.5rem;
+  border: 1px solid red;
+  width: 100%;
 }
 
 .tip__select input {

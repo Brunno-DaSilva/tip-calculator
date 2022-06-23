@@ -36,16 +36,19 @@
 .total__title {
   display: flex;
   flex-direction: column;
+  border: 1px solid red;
 }
 .amount__title p,
 .total__title p {
   font-size: 1.1rem;
   color: var(--very-light-grayish-cyan);
+  border: 1px solid red;
 }
 .amount__title span,
 .total__title span {
   font-size: 0.9rem;
   color: var(--dark-cyan);
+  border: 1px solid red;
 }
 
 .amount__figure h3,
@@ -53,6 +56,7 @@
   font-size: 3.5rem;
   color: var(--primary-cyan);
   letter-spacing: -2px;
+  border: 1px solid red;
 }
 
 .result__button {
