@@ -1,5 +1,5 @@
 .main_calculator {
-  width: 60vw;
+  width: clamp(80%, 60rem, 100%);
   height: 42vh;
   display: flex;
   background-color: var(--white);
