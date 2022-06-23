@@ -156,7 +156,6 @@
   border-radius: 0.25rem;
   padding: 0.35rem 0;
   transition: var(--transition-4s);
-  border: 1px solid red;
   width: clamp(100%, 6rem, 100%);
 }
 .tip__select--label:hover {
