@@ -1,8 +1,34 @@
-# Getting Started with Create React App
+# Tip Calculator
+
+## Overview:
+
+Fully functional and responsive tip calculator app, created from the front-end mentor challenge [tip-calculator](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX/hub/tip-calculator-app-A4WLMq8kqh). Also, I have added a theme toggle button, you can choose between green and brown.
+
+#### Demo:
+
+- https://tip-calculator-bruno-dasilva.surge.sh/
+
+### Built with:
+
+- ReactJS
+- FontAwesome
+- Visual Studio Code
+
+### Deployed with
+
+- Surge.sh
+
+<img src="https://res.cloudinary.com/duprwuo4j/image/upload/v1656033322/starwarsBG/tip-calculator-app-green_cay4z5.png" alt="Green Theme ">
+
+<img src="https://res.cloudinary.com/duprwuo4j/image/upload/v1656033322/starwarsBG/tip-calculator-app-brown_oe2rss.png" alt="Brown Theme ">
+
+---
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
@@ -68,4 +94,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
 # tip-calculator
