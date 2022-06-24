@@ -61,7 +61,7 @@
 .bill__input_main:hover,
 .people__input_main:hover,
 .tip__select--input:hover {
-  border: 1px solid var(--primary-cyan);
+  border: 1px solid var(--input-border);
 }
 
 /* Chrome, Safari, Edge, Opera */

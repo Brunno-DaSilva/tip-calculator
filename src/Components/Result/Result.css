@@ -73,5 +73,5 @@
 .result__button button:hover {
   cursor: pointer;
   opacity: 0.99;
-  color: var(--very-dark-cyan);
+  color: var(--result-background);
 }

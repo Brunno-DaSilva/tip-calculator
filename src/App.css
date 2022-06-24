@@ -20,6 +20,7 @@
   --input-btn: var(--very-dark-cyan);
   --input-custom: var(--dark-grayish-cyan);
   --input-btn-hover: var(--btn-hover);
+  --input-border: var(--primary-cyan);
 }
 
 .brown-mode {
@@ -40,6 +41,11 @@
   --input-btn: var(--primary-green);
   --input-custom: var(--dark-fade-green);
   --input-btn-hover: var(--very-light-brown);
+  --input-border: var(--dark-brown);
+}
+
+.app {
+  background-color: var(--body-bg);
 }
 
 .app {
