@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPoo, faLeaf } from "@fortawesome/free-solid-svg-icons";
 import Calculator from "./Components/Calculator/Calculator";
