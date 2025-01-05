@@ -85,4 +85,4 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 #### Demo:
 
-- Netfly: https://splitter-s2-tip-calculator.netlify.app/
+- Netlify: https://splitter-s2-tip-calculator.netlify.app/
