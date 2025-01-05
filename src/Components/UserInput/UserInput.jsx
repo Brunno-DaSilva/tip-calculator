@@ -115,6 +115,9 @@ const UserInput = ({
           </div>
         </div>
         <div className="input_value__people">
+          <div className="tip__title">
+            <p>Splitters</p>
+          </div>
           {peopleInput === 0 ? (
             <div className="people__title">
               <p>Number of People</p>
