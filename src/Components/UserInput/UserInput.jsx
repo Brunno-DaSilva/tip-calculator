@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./UserInput.css";
 import PeopleIcon from "../../assets/images/icon-person.svg";
 import DollarIcon from "../../assets/images/icon-dollar.svg";
