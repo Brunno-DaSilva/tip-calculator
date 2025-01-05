@@ -6,7 +6,7 @@ Fully functional and responsive tip calculator app, created from the front-end m
 
 #### Demo:
 
-- https://tip-calculator-bruno-dasilva.surge.sh/
+- https://splitter-s2-tip-calculator.netlify.app/
 
 ### Built with:
 
@@ -16,7 +16,7 @@ Fully functional and responsive tip calculator app, created from the front-end m
 
 ### Deployed with
 
-- Surge.sh
+- Netlify
 
 <img src="https://res.cloudinary.com/duprwuo4j/image/upload/v1656033322/starwarsBG/tip-calculator-app-green_cay4z5.png" alt="Green Theme ">
 
@@ -82,3 +82,7 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+#### Demo:
+
+- Netfly: https://splitter-s2-tip-calculator.netlify.app/
